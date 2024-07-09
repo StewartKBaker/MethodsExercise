@@ -20,12 +20,43 @@
             Console.ReadLine();
             Console.Clear();
         }
- 
         
+        //Exercise Two
+        public static int Add(int numOne, int numTwo)
+        {
+            return numOne + numTwo;
+        }
+        public static int Subtract(int numOne, int numTwo)
+        {
+            return numOne - numTwo;
+        }
+        public static int Multiply(int numOne, int numTwo)
+        {
+            return numOne * numTwo;
+        }
+        public static int Divide(int numOne, int numTwo)
+        {
+            return numOne / numTwo;
+        }
+  
         static void Main(string[] args)
         {
             //Exercise One
             ShortStory();
+            
+            
+            //Exercise Two
+            int added = Add(2,5);
+            Console.WriteLine(added);
+            
+            int subtracted = Subtract(320548,39215);
+            Console.WriteLine(subtracted);
+            
+            int multiplied = Multiply(14,19);
+            Console.WriteLine(multiplied);
+            
+            int divided = Divide(295,5);
+            Console.WriteLine(divided);
 
         }
     }
