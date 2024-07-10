@@ -1,4 +1,6 @@
-﻿namespace MethodsExercise
+﻿using System.IO.Pipes;
+
+namespace MethodsExercise
 {
     public class Program
     {
@@ -26,17 +28,35 @@
         {
             return numOne + numTwo;
         }
-        public static int Subtract(int numOne, int numTwo)
+        public static int Sub(params int[] numbers)
         {
-            return numOne - numTwo;
+            int sub = 0;
+            foreach (int number in numbers)
+            {
+                sub -= number;
+            }
+
+            return sub;
         }
-        public static int Multiply(int numOne, int numTwo)
+        public static int Mult(params int[] numbers)
         {
-            return numOne * numTwo;
+            int mult = 0;
+            foreach (int number in numbers)
+            {
+                mult *= number;
+            }
+
+            return mult;
         }
-        public static int Divide(int numOne, int numTwo)
+        public static int Div(params int[] numbers)
         {
-            return numOne / numTwo;
+            int div = 0;
+            foreach (int number in numbers)
+            {
+                div /= number;
+            }
+
+            return div;
         }
         
         //Challenge
@@ -55,26 +75,26 @@
         static void Main(string[] args)
         {
             //Exercise One
-            ShortStory();
+            //ShortStory();
             
             
             //Exercise Two
             int added = Add(2,5);
             Console.WriteLine(added);
             
-            int subtracted = Subtract(320548,39215);
-            Console.WriteLine(subtracted);
+            int resultSub = Sub(320548,39215,684,2847);
+            Console.WriteLine(resultSub);
             
-            int multiplied = Multiply(14,19);
-            Console.WriteLine(multiplied);
+            int resultMult = Mult(14,19,1,7,0);
+            Console.WriteLine(resultMult);
             
-            int divided = Divide(295,5);
-            Console.WriteLine(divided);
+            int resultDiv = Div(295,5,5);
+            Console.WriteLine(resultDiv);
 
             
             //Challenge
-            int result = Sum(5, 5, 5, 5, 5, 5);
-            Console.WriteLine(result);
+            int resultSum = Sum(5, 5, 5, 5, 5, 5);
+            Console.WriteLine(resultSum);
 
         }
     }
