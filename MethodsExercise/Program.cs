@@ -30,17 +30,17 @@ namespace MethodsExercise
         }
         public static int Sub(params int[] numbers)
         {
-            int sub = 0;
-            foreach (int number in numbers)
+            int sub = numbers[0];
+            for (int i = 1; i < numbers.Length; i++)
             {
-                sub -= number;
+                sub -= numbers[i];
             }
 
             return sub;
         }
         public static int Mult(params int[] numbers)
         {
-            int mult = 0;
+            int mult = 1;
             foreach (int number in numbers)
             {
                 mult *= number;
@@ -50,10 +50,10 @@ namespace MethodsExercise
         }
         public static int Div(params int[] numbers)
         {
-            int div = 0;
-            foreach (int number in numbers)
+            int div = numbers[0];
+            for (int i = 1; i < numbers.Length; i++)
             {
-                div /= number;
+                div /= numbers[i];
             }
 
             return div;
@@ -85,7 +85,7 @@ namespace MethodsExercise
             int resultSub = Sub(320548,39215,684,2847);
             Console.WriteLine(resultSub);
             
-            int resultMult = Mult(14,19,1,7,0);
+            int resultMult = Mult(14,19,1,7);
             Console.WriteLine(resultMult);
             
             int resultDiv = Div(295,5,5);
