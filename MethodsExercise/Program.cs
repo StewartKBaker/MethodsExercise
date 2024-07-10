@@ -79,8 +79,8 @@ namespace MethodsExercise
             
             
             //Exercise Two
-            int added = Add(2,5);
-            Console.WriteLine(added);
+            int resultSum = Sum(5, 5, 5, 5, 5, 5);
+            Console.WriteLine(resultSum);
             
             int resultSub = Sub(320548,39215,684,2847);
             Console.WriteLine(resultSub);
@@ -90,11 +90,6 @@ namespace MethodsExercise
             
             int resultDiv = Div(295,5,5);
             Console.WriteLine(resultDiv);
-
-            
-            //Challenge
-            int resultSum = Sum(5, 5, 5, 5, 5, 5);
-            Console.WriteLine(resultSum);
 
         }
     }
